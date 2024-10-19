@@ -88,10 +88,10 @@
 			//alert('Art')
 			console.log(witch.checked)
 			if (witch.checked){
-				info = ksu.exec('/data/adb/modules/admirepowered/bin/zygiskd64 dable');//关闭按钮
+				info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 dable');//关闭按钮
 				//alert(info);
 			}{
-				info = ksu.exec('/data/adb/modules/admirepowered/bin/zygiskd64 eable');//开启按钮
+				info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 eable');//开启按钮
 				//alert(info);
 			}
 	  });
@@ -118,10 +118,10 @@
 	  });
 
 	  try	{
-		info = ksu.exec('/data/adb/modules/admirepowered/bin/zygiskd64 version');
+		info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 version');
 		item[1].textContent=info;
 
-		info = ksu.exec('/data/adb/modules/admirepowered/bin/zygiskd64 status');
+		info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 status');
 		if (info=="1"){
 			witch.checked=false;
 		}
