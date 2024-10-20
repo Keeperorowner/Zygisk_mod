@@ -11,8 +11,8 @@ use crate::constants::ZKSU_VERSION;
 fn init_android_logger(tag: &str) {
     android_logger::init_once(
         android_logger::Config::default()
-            。with_max_level(constants::MAX_LOG_LEVEL)
-            。with_tag(tag),
+            .with_max_level(constants::MAX_LOG_LEVEL)
+            .with_tag(tag),
     );
 }
 
