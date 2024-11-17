@@ -89,10 +89,10 @@
 			//alert('Art')
 			console.log(witch.checked)
 			if (witch.checked){
-				info = ksu.exec('/data/adb/modules/Zygisk_mod/bin/zygiskd64 dable');//关闭按钮
+				info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 dable');//关闭按钮
 				//alert(info);
 			}{
-				info = ksu.exec('/data/adb/modules/Zygisk_mod/bin/zygiskd64 eable');//开启按钮
+				info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 eable');//开启按钮
 				//alert(info);
 			}
 	  });
@@ -119,15 +119,15 @@
 	  });
 
 	  try	{
-		info = ksu.exec('/data/adb/modules/Zygisk_mod/bin/zygiskd64 version');
+		info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 version');
 		item[1].textContent=info;
 
-		info = ksu.exec('/data/adb/modules/Zygisk_mod/bin/zygiskd64 status');
+		info = ksu.exec('/data/adb/modules/zygisksu/bin/zygiskd64 status');
 		if (info=="1"){
 			witch.checked=false;
 		}
 
-		info = ksu.exec('cat /data/adb/modules/Zygisk_mod/info.json');
+		info = ksu.exec('cat /data/adb/modules/zygisksu/info.json');
 
 		//var info = '{"a":0,"b":0,"p32":0,"p64":0}'
 		list = JSON.parse(info)
